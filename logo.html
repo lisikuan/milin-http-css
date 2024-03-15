@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>觅林</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .main {
+            width: 1650px;
+            /*调整大小*/
+            margin: auto;
+        }
+
+        .header, .nav, .container, .footer {
+            float: left;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background: url(./img/forest2.jpg);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav {
+            height: 40px;
+            /*background:linear-gradient(#000000,#00fff5);*/
+            background: #333;
+        }
+
+            .nav a {
+                color: #fff;
+                padding: 10px 20px;
+                display: inline-block;
+                text-decoration: none;
+            }
+
+                .nav a:hover {
+                    background: #bbb;
+                    color: #000;
+                }
+
+        .lside {
+            width: 500px;
+            float: left;
+            border: 2px solid black;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .rside {
+            width: 300px;
+            float: right;
+            border: 2px solid black;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .content {
+            margin: 0px 205px;
+            /*background: url(forest.jpg) no-repeat;*/
+        }
+
+        .lside, .rside, .content {
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            padding: 10px;
+            background: #ccc;
+            text-align: center;
+        }
+
+        @media screen and (max-width:700px) {
+            .lside, .rside, .content {
+                width: 100%;
+                margin: 0px;
+            }
+        }
+
+        #wrapper {
+            width: 846px;
+            height:300px;
+            border: 2px solid blue;
+            margin: 20px 0;
+            overflow: auto;
+        }
+
+        img {
+            width: 60px;
+            border-radius: 50%;
+            transform: translateY(17px);
+        }
+
+        .wrapper input {
+            width: 50px;
+            height: 20px;
+        }
+
+        .wrapper button {
+            width: 50px;
+            height: 20px;
+        }
+        .content img{
+            width: 100%;
+            height:100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>觅林</h1>
+        </div>
+        <div class="nav">
+            <a href="company.html">校园搭子</a>
+            <a href="forum.html">同好论坛</a>
+            <a href="help.html">匿名心理互助</a>
+            <a href="milin tree hole.html">觅林树洞</a>
+            <a href="contact.html">牵线搭桥</a>
+            <a href="chat.html">随机群聊</a>
+            <a href="secret.html">觅林密语</a>
+            <a href="user.html" style="float: right;">用户</a>
+            <a href="logo.html" style="float: right; width: 10px; height: 20px; background: url(./img/logo1.png);"></a>
+
+        </div>
+        <div class="container">
+            <div class="content">
+                <img src="./img/logo1.png" alt="">
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                版权声明，备案信息，联系方式，友情链接
+                <br>制作人：李思宽、陶雷蕾
+            </p>
+        </div>
+    </div>
+</body>
+</html>

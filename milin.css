@@ -503,3 +503,59 @@ h1,p,h2 {
                 0.14em 0.14em 0 #112, 0.145em 0.145em 0 #44a;
         }
     }
+
+
+    form {
+        margin-bottom: 20px;
+    }
+    form label{
+        color: #000;
+    }
+
+    .content input[type="text"], input[type="password"], textarea {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    .content button {
+        background-color: #e0f3e0;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 70%;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .content button:hover {
+        background-color: #52e559;
+    }
+
+    #login{
+        width: 50px;
+        height: 40px;
+    }
+
+    #regis{
+        width: 50px;
+        height: 40px;
+    }    
+
+    .content h1 {
+        background-color: #64adfa;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 70%;
+        margin: auto;
+        border-radius: 20px 20px 20px 20px;
+    }
+    .content p,h3,h2{
+        color: #000;
+    }

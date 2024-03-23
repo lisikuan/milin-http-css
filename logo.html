@@ -1,154 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>觅林</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            list-style: none;
-        }
-
-        h1 {
-            color: white;
-        }
-
-        .main {
-            width: 1650px;
-            /*调整大小*/
-            margin: auto;
-        }
-
-        .header, .nav, .container, .footer {
-            float: left;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .header {
-            background: url(./img/forest2.jpg);
-            padding: 20px;
-            text-align: center;
-        }
-
-        .nav {
-            height: 40px;
-            /*background:linear-gradient(#000000,#00fff5);*/
-            background: #333;
-        }
-
-            .nav a {
-                color: #fff;
-                padding: 10px 20px;
-                display: inline-block;
-                text-decoration: none;
-            }
-
-                .nav a:hover {
-                    background: #bbb;
-                    color: #000;
-                }
-
-        .lside {
-            width: 500px;
-            float: left;
-            border: 2px solid black;
-            border-radius: 10px 10px 10px 10px;
-        }
-
-        .rside {
-            width: 300px;
-            float: right;
-            border: 2px solid black;
-            border-radius: 10px 10px 10px 10px;
-        }
-
-        .content {
-            margin: 0px 205px;
-            /*background: url(forest.jpg) no-repeat;*/
-        }
-
-        .lside, .rside, .content {
-            padding: 5px;
-            box-sizing: border-box;
-        }
-
-        .footer {
-            padding: 10px;
-            background: #ccc;
-            text-align: center;
-        }
-
-        @media screen and (max-width:700px) {
-            .lside, .rside, .content {
-                width: 100%;
-                margin: 0px;
-            }
-        }
-
-        #wrapper {
-            width: 846px;
-            height:300px;
-            border: 2px solid blue;
-            margin: 20px 0;
-            overflow: auto;
-        }
-
-        img {
-            width: 60px;
-            border-radius: 50%;
-            transform: translateY(17px);
-        }
-
-        .wrapper input {
-            width: 50px;
-            height: 20px;
-        }
-
-        .wrapper button {
-            width: 50px;
-            height: 20px;
-        }
-        .content img{
-            width: 100%;
-            height:100%;
-        }
-    </style>
-
+    <title>觅林logo</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
+<style>
+    .content{
+        height: 400px;
+        width: 400px;
+        margin: auto;
+    }
+    .content img{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+transition: all 0.6s;
+    }
+    .content img:hover{
+        transform: scale(1.05);
+    }
+
+    </style>
 <body>
     <div class="main">
-        <div class="header">
-            <h1>觅林</h1>
+          <!-- 头部区域开始 -->
+    <div class="header w">
+        <!-- 第一行logo -->
+        <div class="logo">
+            <img src="./img/logo1.png" alt="">
         </div>
-        <div class="nav">
-            <a href="company.html">校园搭子</a>
-            <a href="forum.html">同好论坛</a>
-            <a href="help.html">匿名心理互助</a>
-            <a href="milin tree hole.html">觅林树洞</a>
-            <a href="contact.html">牵线搭桥</a>
-            <a href="chat.html">随机群聊</a>
-            <a href="secret.html">觅林密语</a>
-            <a href="user.html" style="float: right;">用户</a>
-            <a href="logo.html" style="float: right; width: 10px; height: 20px; background: url(./img/logo1.png);"></a>
-
+        <!-- 第一行导航栏 -->
+        <div class="nav w">
+            <ul class="homepage">
+                <li> <a href="Index.html">首页</a> </li>
+                <li> <a href="rule.html">活跃度细则</a></li>
+                <li> <a href="milin.html">登录</a></li>
+            </ul>
         </div>
-        <div class="container">
+        <!-- 第一行搜索框 -->
+        <div class="search">
+            <input type="text" id="word">
+            <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
+            <button id="check" onclick="SearchMessage()">搜索</button>
+            <button id="hi">签到</button>
+        </div>
+        <!-- 第一行用户区 -->
+        <div class="user">
+            <img src="./img/1(2).jpg" alt="">
+            <a href="user.html">用户</a>
+            
+        </div>
+    </div>
+    <!-- 头部区域结束 -->
+    <!-- banner部分开始 -->
+    <div class="banner ">
+        <div class="w">
+            
+            <!-- 侧边导航栏 -->
+            <div class="subnav">
+                <ul>
+                    <li>
+                        <a href="gg.html">公告</a>
+                        <span> -> </span>
+                    </li>
+ <li>
+                        <a href="lyb.html">留言板</a>
+                        <span> -> </span>
+                    </li>
+                    <li>
+                        <a href="company.html">校园搭子</a>
+                        <span> -> </span>
+                    </li>
+ 
+                    <li>
+                        <a href="group.html">同好集群</a>
+                        <span> -> </span>
+                    </li>
+ 
+                    <li>
+                        <a href="milin tree hole.html">觅林树洞</a>
+                        <span> -> </span>
+                    </li>
+ 
+                    <li>
+                        <a href="secret.html">觅林密语</a>
+                        <span> -> </span>
+                    </li>
+ 
+                    <li>
+                        <a href="help.html">匿名心理互助</a>
+                        <span> -> </span>
+                    </li>
+ 
+                    <li>
+                        <a href="chat.html">随机群聊</a>
+                        <span> -> </span>
+                    </li>
+                </ul>
+ 
+            </div>
+            <!-- 右边课程表 -->
+            <div class="course">
+                <h3>热门内容：</h3>
+                <div class="bd">
+                    <ul>
+                        <li>
+                            <h4>校园搭子</h4>
+                            <p>已开发</p>
+                        </li>
+                        <li>
+                            <h4>觅林树洞</h4>
+                            <p>已开发</p>
+                        </li>
+                        <li>
+                            <h4>觅林密语</h4>
+                            <p>已开发</p>
+                        </li>
+                        <a class="more" href="milin.html">开始探索！</a>
+                    </ul>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="con">
+        <p class="ab">  欢迎来到觅林！</p>
+    </div>
+    <!-- 精品推荐导航部分开始 -->
+    <div class="goods w">
+        <h3>模块分类</h3>
+        <ul>
+            <li>
+                <a href="company.html">校园搭子</a>
+            </li>
+            <li>
+                <a href="group.html">同好集群</a>
+            </li>
+            <li>
+                <a href="help.html">匿名心理互助</a>
+            </li>
+            <li>
+                <a href="milin tree hole.html">觅林树洞</a>
+            </li>
+            <li>
+                <a href="secret.html">觅林密语</a>
+            </li>
+            <li>
+                <a href="chat.html">随机群聊</a>
+            </li>
+            <li>
+                <a href="contact.html">牵线搭桥</a>
+            </li>
+        </ul>
+        <a class="mod" href="#">更多</a>
+    </div>
+    </div>
+        <div class="contain">
             <div class="content">
                 <img src="./img/logo1.png" alt="">
             </div>
         </div>
         <div class="footer">
-            <p>
-                版权声明，备案信息，联系方式，友情链接
-                <br>制作人：李思宽、陶雷蕾
-            </p>
+            <div class="w">
+                <div class="copyright">
+                    <a href="#" class="cc">下载觅林App</a>
+                    <!--<div class="rainbow"></div>-->
+                    <div class="container">
+                    <a href="#" class="shadow"></a>
+                    <!--<img src="./img/logo1.1.png" alt="">-->
+            </div>
+                    <p>
+                       友情连接、项目条款、声明
+                        <br>
+                        © “觅林”项目开发组保留所有权利。
+                        <br> “觅林”意为“在使用我们的开发项目后能够像走迷宫一样发现独属于自己的那颗树（那个人）”。
+                    </p>
+                </div> 
+                <div class="links">
+                    <dl>
+                        <dt>关于“觅林”</dt>
+                        <dd> <a href="#">关于 </a> </dd>
+                        <dd> <a href="#">管理团队</a> </dd>
+                        <dd> <a href="#">工作机会</a> </dd>
+                        <dd> <a href="#">客户服务</a> </dd>
+                        <dd> <a href="#">帮助 </a> </dd>
+                    </dl>
+                    <dl>
+                        <dt>友情链接</dt>
+                        <dd><a href="http://dekt.bupt.edu.cn" target="_blank">第二课堂</a></dd>
+                        <dd><a href="http://static.byr.cn" target="_blank">北邮人论坛</a></dd>
+                    </dl>
+                </div>
+            </div>
         </div>
+        <!-- 底部模块结束 -->
+       
     </div>
 </body>
 </html>

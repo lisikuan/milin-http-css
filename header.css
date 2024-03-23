@@ -1,0 +1,317 @@
+* {
+    margin:0px;
+    padding:0px;  
+    text-decoration: none;
+    list-style: none;
+  }
+
+  /* 定义全局变量 */  
+:root {  
+    --main-color: #00a4ff;  
+    --text-color: #030303;  
+    --header-height: 42px;  
+    --banner-height: 421px;  
+    --banner-bg-color: #4ff768;  
+}  
+
+  .main {
+    width: 1650px;
+    /*调整大小*/
+    margin: auto;
+}
+   
+  .body {
+      background-color: #f3f5f7;
+  
+  }
+  .w {
+      width: 1200px;
+      margin: 10px auto;
+      font-size: 20px;
+      text-align: center;
+  }
+   
+  /* 清除浮动代码 */
+  .clearfix::after {  
+    content: "";  
+    display: table;  
+    clear: both;  
+}  
+   
+  li{
+     list-style: none; 
+  }
+  a {  
+    text-decoration: none;  
+    color: var(--text-color);  
+    transition: color 0.3s ease; /* 平滑过渡效果 */  
+}  
+  
+a:hover {  
+    color: var(--main-color);  
+}  
+  /*下面是各个区域的分工*/
+  /* 头部区域的样式 */
+  .header {
+    height: var(--header-height);
+      background: #ffffff;
+  }
+   
+  /* logo部分 */
+  .logo {
+    float: left;
+    width: 60px;
+    height:60px;
+ 
+}
+
+  .logo img{
+      width: 85%;
+      height:85%;
+      border-radius: 50%;
+  }
+   
+  /* 导航栏部分 */
+  .nav ul{  
+    float: left;  
+    margin-left: 80px;  
+}  
+  
+.nav li {  
+    display: inline-block;  
+    height: var(--header-height);  
+    padding: 0 10px;  
+    line-height: var(--header-height);  
+    color: #050505;  
+    font-size: 18px;  
+}  
+   /* 伪类设置 */
+   .nav li a:hover {
+      color: #3fa9ff;
+      border-bottom: 2px solid var(--main-color); 
+   }
+   
+   /* 搜索框样式 */
+  .search {
+      float: left; 
+      margin-left:80px;
+  }
+  /* 搜索框 */
+  .search input {
+    float: left;  
+    width: 400px;  
+    height: 40px;  
+    color: #1bc4fd;  
+    padding-left: 15px;  
+    border: 1px solid var(--main-color);  
+  }
+  /* 按钮 */
+  button {
+    width: 60px;  
+    height: 42px;  
+    background-color: var(--main-color);; /* 假设的按钮背景色 */  
+    color: white; /* 假设的按钮文字颜色 */  
+    border: none; /* 移除默认的边框 */  
+    cursor: pointer; /* 鼠标悬停时变为手形图标 */  
+  }
+   
+  /* 用户区域 */
+  .user {
+       float: right; 
+       margin-right:10px;
+  }
+
+  .user a:hover{
+    color: var(--main-color);
+  }
+   
+  /* banner部分样式 */
+  .banner {
+    height: var(--banner-height);  
+    background-color: var(--banner-bg-color); 
+  }
+    
+  /* 背景图片 */
+  .banner .w {
+    height: var(--banner-height);  
+    background: url(./img/index2.1.png) no-repeat top center; 
+  }
+   
+  /* 左侧导航栏部分 */
+  .subnav {
+      float:left;
+      width: 190px;
+      height: 421px;
+      background-color:var(--banner-color);
+  }
+  .subnav ul li a {
+      float:left;
+      line-height: 45px;
+      color: #000000;
+      font-size:14px;
+      padding:0 20px;
+  }
+   
+  .subnav ul li span { 
+      float:right;
+      line-height: 45px;
+      color: #fff;
+      padding-right:20px;
+  } 
+  .subnav a:hover{
+    color: var(--main-color);  
+  }
+    
+  /* 右侧用户区部分 */
+  .course {
+      float:right;
+      width: 230px;
+      height: 300px;
+      margin-top:50px;
+      background-color: #fff;
+  }
+   
+   
+  .bd {
+      padding:0 20px;
+  }
+  .course h3 {
+      height:48px;
+      line-height:48px;
+      font-weight:400;
+      color:#fff;
+      text-align:center;
+      background-color: #9bceea;
+      
+  }
+   
+  .course ul li {
+      border-bottom: 1px solid #a5a5a5;
+      padding:14px 0;
+  }
+   
+  .course ul li h4 {
+      font-size:16px;
+      color: #4e4e4e;
+     
+  }
+   
+  .course ul li p {
+      font-size:12px;
+      color:#a5a5a5;
+  }
+   
+  .more {
+      display: block;
+      height:38px;
+      line-height: 38px;
+      text-align:center;
+      color:#42aaff;
+      font-size:16px;
+      font-weight: 700;
+      border: 1px solid #00a4ff;
+      margin:5px;
+  }
+   
+  .more:hover{
+    color:#000;
+  }
+  /* 精品推荐部分 */
+  .goods {
+      height: 60px;  
+  background-color: #fff;  
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);  
+  margin-top: 10px;  
+  display: flex; /* 使用Flexbox进行布局 */  
+  align-items: center; /* 垂直居中对齐子元素 */  
+  }
+   
+  /* 标题部分 */
+  .goods h3 {
+    margin-left: 30px;  
+    font-size: 16px;  
+    color: #00a4ff;  
+  }
+   
+  /* 精品导航栏部分 */
+  .goods ul {
+    margin-left: auto; /* 使用margin-left: auto将导航栏推到右边 */  
+    display: flex;  
+    align-items: center; /* 垂直居中对齐 */  
+  }
+   
+  .goods ul li {
+    display: inline-block;  
+     
+  }
+  .goods ul li a {
+    padding: 0 30px;  
+    font-size: 16px;  
+    color: #050505;  
+    border-left: 1px solid #cccccc;  
+    text-decoration: none; /* 添加移除下划线 */  
+  }
+
+  .goods ul li a:hover {
+    color: #3fa9ff;  
+ }
+   
+   
+  .mod {
+         float:right;
+         line-height: 60px;
+         font-size: 16px;
+         color:#00a4ff;
+         padding-right:30px;
+  } 
+   
+ 
+/*欢迎来到觅林*/   
+      .ab {
+        color: #4ff768;
+        text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 #112,
+            0.045em 0.045em 0 #88e, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #66c,
+            0.14em 0.14em 0 #112, 0.145em 0.145em 0 #44a;
+        animation: pulsea 300ms ease infinite alternate;
+    }
+    .con {
+        height:100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /*transform: rotateX(25deg) rotateY(-25deg);*/
+        margin: auto;
+        background-color: #e9ebee;
+    }
+    
+    .con p {
+        text-align: center;
+        display: block;
+        font-size: 10vh;
+        letter-spacing: 0.1em;
+        max-height: 10vh;
+        margin-bottom: 50px;
+    }  
+    @keyframes pulsea {
+        0% {
+            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 #112,
+                0.045em 0.045em 0 #88e, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #66c,
+                0.14em 0.14em 0 #112, 0.145em 0.145em 0 #aaf;
+        }
+        50% {
+            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 #112,
+                0.045em 0.045em 0 #88e, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #aaf,
+                0.14em 0.14em 0 #112, 0.145em 0.145em 0 #44a;
+        }
+        75% {
+            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 #112,
+                0.045em 0.045em 0 #aaf, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #66c,
+                0.14em 0.14em 0 #112, 0.145em 0.145em 0 #44a;
+        }
+        100% {
+            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.4), 0.04em 0.04em 0 #112,
+                0.045em 0.045em 0 #88e, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #66c,
+                0.14em 0.14em 0 #112, 0.145em 0.145em 0 #44a;
+        }
+    }

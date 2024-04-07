@@ -1,3 +1,4 @@
+/*
 .contain {
     position: relative;
     height: 85vh;
@@ -21,24 +22,25 @@
     background: #fff0b6;
 }
 
+
+*/
 .rside {
-    border: 2px solid black;
     border-radius: 10px 10px 10px 10px;
-    
+    background: rgb(213, 240, 255);
+    max-width: 400px;
     order: 3;
     flex: 400px 0 0;
-    background: rgb(213, 240, 255);
 }
 .rside a:hover{
     color: #3fa9ff;
       border-bottom: 2px solid #00acfd;
 
 } 
-
 .content {
     order: 2;
     flex: auto 1 0 ;
     background: #ffffff;
+    margin-left: 200px;
 }
 
 #wrapper {
@@ -58,4 +60,27 @@
 .wrapper button {
     width: 50px;
     height: 20px;
+}
+#import{
+    width: 400px;
+    border-color: black;
+}
+.advanced-link {  
+    display: inline-block;  
+    padding: 10px 20px;  
+    background-color: #3498db;  
+    color: #fff;  
+    font-size: 16px;  
+    font-weight: bold;  
+    text-decoration: none;  
+    border-radius: 4px;  
+    transition: background-color 0.3s ease;  
+}  
+  
+.advanced-link:hover {  
+    background-color: #2980b9;  
+}  
+  
+.advanced-link:active {  
+    background-color: #20638f;  
 }

@@ -69,6 +69,11 @@ a:hover {
       width: 85%;
       height:85%;
       border-radius: 50%;
+      cursor: pointer;
+transition: all 0.6s;
+  }
+  .logo img:hover{
+    transform: scale(1.2);
   }
    
   /* 导航栏部分 */
@@ -119,16 +124,28 @@ a:hover {
   .user {
        float: right; 
        margin-right:10px;
+       border-radius: 50%
   }
 
   .user a:hover{
     color: var(--main-color);
   }
+  .user img{
+    cursor: pointer;
+transition: all 0.6s;
+border-radius: 50%;
+border-color:#000 ;
+  }
+
+  .user img:hover{
+    transform: scale(1.2);
+  }
    
   /* banner部分样式 */
   .banner {
     height: var(--banner-height);  
-    background-color: var(--banner-bg-color); 
+    background-color:#90EE90; 
+    border-radius: 40px 40px 40px 40px;
   }
     
   /* 背景图片 */
@@ -221,28 +238,27 @@ a:hover {
       height: 60px;  
   background-color: #fff;  
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);  
-  margin-top: 10px;  
+  margin-top: 10px; 
   display: flex; /* 使用Flexbox进行布局 */  
   align-items: center; /* 垂直居中对齐子元素 */  
   }
    
   /* 标题部分 */
-  .goods h3 {
-    margin-left: 30px;  
+  .goods h3 { 
+    margin-left: auto;
     font-size: 16px;  
     color: #00a4ff;  
   }
    
   /* 精品导航栏部分 */
-  .goods ul {
-    margin-left: auto; /* 使用margin-left: auto将导航栏推到右边 */  
-    display: flex;  
+  .goods ul {  
+    display: flex;
+    margin-left: 100px;  
     align-items: center; /* 垂直居中对齐 */  
   }
    
   .goods ul li {
     display: inline-block;  
-     
   }
   .goods ul li a {
     padding: 0 30px;  
@@ -258,6 +274,7 @@ a:hover {
    
    
   .mod {
+    margin-left: 50px;
          float:right;
          line-height: 60px;
          font-size: 16px;
@@ -267,24 +284,25 @@ a:hover {
    
  
 /*欢迎来到觅林*/   
-      .ab {
-        color: #4ff768;
-        text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 #112,
-            0.045em 0.045em 0 #88e, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #66c,
-            0.14em 0.14em 0 #112, 0.145em 0.145em 0 #44a;
+      /*.ab {
+        color: green;
+        text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 white,
+            0.045em 0.045em 0 #88e, 0.09em 0.09em 0 white, 0.095em 0.095em 0 #66c,
+            0.14em 0.14em 0 white, 0.145em 0.145em 0 #44a;
         animation: pulsea 300ms ease infinite alternate;
-    }
+    }*/
     .con {
-        height:100px;
+        height:130px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         /*transform: rotateX(25deg) rotateY(-25deg);*/
         margin: auto;
-        background-color: #e9ebee;
+        border-radius: 10px 10px 10px 10px;
+        background-color: white;
     }
-    
+    /*
     .con p {
         text-align: center;
         display: block;
@@ -293,25 +311,65 @@ a:hover {
         max-height: 10vh;
         margin-bottom: 50px;
     }  
+    
     @keyframes pulsea {
         0% {
-            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 #112,
-                0.045em 0.045em 0 #88e, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #66c,
-                0.14em 0.14em 0 #112, 0.145em 0.145em 0 #aaf;
+            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 white,
+                0.045em 0.045em 0 #88e, 0.09em 0.09em 0 white, 0.095em 0.095em 0 #66c,
+                0.14em 0.14em 0 white, 0.145em 0.145em 0 #aaf;
         }
         50% {
-            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 #112,
-                0.045em 0.045em 0 #88e, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #aaf,
-                0.14em 0.14em 0 #112, 0.145em 0.145em 0 #44a;
+            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 white,
+                0.045em 0.045em 0 #88e, 0.09em 0.09em 0 white, 0.095em 0.095em 0 #aaf,
+                0.14em 0.14em 0 white, 0.145em 0.145em 0 #44a;
         }
         75% {
-            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 #112,
-                0.045em 0.045em 0 #aaf, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #66c,
-                0.14em 0.14em 0 #112, 0.145em 0.145em 0 #44a;
+            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 white,
+                0.045em 0.045em 0 #aaf, 0.09em 0.09em 0 white, 0.095em 0.095em 0 #66c,
+                0.14em 0.14em 0 white, 0.145em 0.145em 0 #44a;
         }
         100% {
-            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.4), 0.04em 0.04em 0 #112,
-                0.045em 0.045em 0 #88e, 0.09em 0.09em 0 #112, 0.095em 0.095em 0 #66c,
-                0.14em 0.14em 0 #112, 0.145em 0.145em 0 #44a;
+            text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.4), 0.04em 0.04em 0 white,
+                0.045em 0.045em 0 #88e, 0.09em 0.09em 0 white, 0.095em 0.095em 0 #66c,
+                0.14em 0.14em 0 white, 0.145em 0.145em 0 #44a;
         }
     }
+   
+  .con p {  
+      position: relative;  
+      font-size: 10vh;  
+      font-weight: bold;  
+      background: #fff;  
+      color: #000;  
+      overflow: hidden;  
+  }  
+    
+  .con p::before,  
+  .con p::after {  
+      content: "";  
+      position: absolute;  
+      top: -923px;  
+      left: 50%;  
+      width: 2000px;  
+      height: 2000px;  
+      border-radius: 45% 48% 43% 47%;  
+      transform: translate(-50%, -50%);  
+      background: rgba(3, 169, 244, .85);;  
+      animation: rotate 10s infinite linear;  
+      z-index: 1;  
+      mix-blend-mode: lighten;  
+  }  
+    
+  .con p::after {  
+      border-radius: 43% 47% 44% 48%;  
+      animation: rotate 10s infinite .5s linear;  
+  }  
+    
+  @keyframes rotate {  
+      0% {  
+          transform: translate(-50%, -50%) rotate(0);  
+      }  
+      100% {  
+          transform: translate(-50%, -50%) rotate(360deg);  
+      }  
+  }*/

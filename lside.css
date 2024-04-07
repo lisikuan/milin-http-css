@@ -1,0 +1,94 @@
+/*contain区域*/
+.contain {
+    position: relative;
+    height: 90vh;
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.lside,.rside,.content,.contain {
+        height: 90vh;
+        text-align: center;
+}
+
+/*.lside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    padding: 20px;
+    order: 1;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex: 400px 0 0;
+    background:#fff0b6;
+    }
+.lside a{
+    font-size: 22px;
+    color: #64adfa;
+}
+
+
+
+.rside {
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+    
+    order: 3;
+    flex: 400px 0 0;
+    background: rgb(213, 240, 255);
+}
+.lside {
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+
+    order: 1;
+    flex: 400px 0 0;
+    background: #fff0b6;
+}*/
+
+.lside {  
+    width: 100px; /* 初始宽度 */  
+    height: 80px; /* 初始高度 */  
+    background-color: #52e559; /* 背景颜色 */  
+    color: #333; /* 文字颜色 */  
+    text-align: center; /* 文字居中 */  
+    line-height: 50px; /* 文字垂直居中 */  
+    border: 1px solid #ddd; /* 边框 */  
+    border-radius: 5px; /* 圆角 */  
+    box-shadow: 0 2px 5px #bdd0fc; /* 阴影 */  
+    overflow: hidden; /* 隐藏超出容器的内容 */  
+    transition: all 0.3s ease; /* 平滑过渡效果 */  
+    cursor: pointer; /* 鼠标悬停时显示小手图标 */  
+    position: relative; /* 以便绝对定位内部元素 */  
+}  
+  
+.hidden-text {  
+    position: absolute; /* 绝对定位以便在hover时能够移动 */  
+    width: 100%; /* 与容器宽度相同 */  
+    height: 100%; /* 与容器高度相同 */  
+    top: 0; /* 初始位置与容器顶部对齐 */  
+    left: 100%; /* 初始位置在容器外部 */  
+    line-height: normal; /* 重置行高 */  
+    transition: left 0.3s ease; /* 平滑过渡效果 */  
+}  
+  
+.lside:hover {  
+    width: 400px; /* hover时的宽度 */  
+    height: 90vh; /* hover时的高度 */  
+    background-color: #52e559; /* hover时的背景颜色 */  
+    border-color: #bdd0fc; /* hover时的边框颜色 */  
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); hover时的阴影 */  
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5); /* 全屏阴影效果 */  
+}  
+  
+.lside:hover .hidden-text {  
+    left: 0; /* hover时将文本移入容器内 */  
+}
+
+.lside a:hover{
+    color: #f94c4c;
+}

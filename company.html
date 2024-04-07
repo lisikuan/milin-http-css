@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="company.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="lside.css">
     <title>校园搭子</title>
 </head>
 <body>
@@ -21,14 +21,14 @@
         <!-- 第一行导航栏 -->
         <div class="nav w">
             <ul class="homepage">
-                <li> <a href="Index.html">首页</a> </li>
+                <li> <a href="index.html">首页</a> </li>
                 <li> <a href="rule.html">活跃度细则</a></li>
                 <li> <a href="milin.html">登录</a></li>
             </ul>
         </div>
         <!-- 第一行搜索框 -->
         <div class="search">
-            <input type="text" value="输入关键词">
+            <input type="text">
             <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
             <button id="check">搜索</button>
         </div>
@@ -46,19 +46,15 @@
             
             <!-- 侧边导航栏 -->
             <div class="subnav">
-                <ul>
+                <ul><li>
+                        <a href="logo.html">logo详情</a>
+                        <span> -> </span>
+                    </li>
                     <li>
                         <a href="gg.html">公告</a>
                         <span> -> </span>
                     </li>
-                    <li>
-                        <a href="logo.html">logo</a>
-                        <span> -> </span>
-                    </li>
-                    <li>
-                        <a href="lyb.html">留言板</a>
-                        <span> -> </span>
-                    </li>
+                    
                     <li>
                         <a href="company.html">校园搭子</a>
                         <span> -> </span>
@@ -78,12 +74,6 @@
                         <a href="secret.html">觅林密语</a>
                         <span> -> </span>
                     </li>
- 
-                    <li>
-                        <a href="help.html">匿名心理互助</a>
-                        <span> -> </span>
-                    </li>
- 
                     <li>
                         <a href="chat.html">随机群聊</a>
                         <span> -> </span>
@@ -115,21 +105,22 @@
             </div>
         </div>
     </div>
-    <div class="con">
-        <p class="ab">  欢迎来到觅林！</p>
-    </div>
     <!-- 精品推荐导航部分开始 -->
     <div class="goods w">
         <h3>模块分类</h3>
-        <ul>
+        <ul><li>
+            <a href="logo.html">logo详情</a>
+            
+        </li>
+        <li>
+            <a href="gg.html">公告</a>
+            
+        </li>
             <li>
                 <a href="company.html">校园搭子</a>
             </li>
             <li>
                 <a href="group.html">同好集群</a>
-            </li>
-            <li>
-                <a href="help.html">匿名心理互助</a>
             </li>
             <li>
                 <a href="milin tree hole.html">觅林树洞</a>
@@ -140,9 +131,6 @@
             <li>
                 <a href="chat.html">随机群聊</a>
             </li>
-            <li>
-                <a href="contact.html">牵线搭桥</a>
-            </li>
         </ul>
         <a class="mod" href="#">更多</a>
     </div>
@@ -150,19 +138,14 @@
     <!-- 精品推荐导航部分结束 -->
         <div class="contain">
             <div class="lside">
-                <a href="gg.html">公告</a>
+                <a href="gg.html">
+                    <h2>公告</h2>
                 <hr>
+                <br>
+                <br>
                 <p>
                     校园搭子模块：内容包含但不限于运动召集，拼车，拼团，校园跑搭子，集体活动统一出行，回乡同行等，用户可以根据标签进行筛选匹配，有助对渴望社交但略带社交恐惧的同学，让他们不必再害怕加入大型社群后无法交流的情况。<br>
-                </p>
-            </div>
-            <div class="rside">
-                <h3>您已加入的模块:</h3>
-                <hr>
-                <div id="import">
-                </div>
-                <br><br>
-                <a href="http://127.0.0.1:8080/index.html">进入聊天</a>
+                </p></a>
             </div>
             <div class="content">
                 <h2 style="font-weight:bold">校园搭子</h2>
@@ -171,9 +154,14 @@
                 <button id="btn">查找</button>
                 <button id="join">加入</button>
                 <div id="wrapper"></div>
-                <script src="company.js"></script>
-                <br>
             </div>
+            <div class="rside">
+                <h3>您已加入的模块:</h3>
+                <div id="import"></div>
+                <br><br>
+                <a href="http://127.0.0.1:8080/index.html" class="advanced-link">进入聊天</a>
+                </div>
+            <script src="company.js"></script>
         </div>
         <!-- 底部模块开始 -->
     <div class="footer">
@@ -182,7 +170,7 @@
                 <a href="#" class="cc">下载觅林App</a>
                 <!--<div class="rainbow"></div>-->
                 <div class="container">
-                <a href="#" class="shadow"></a>
+                <a href="#" class="shadow">milin</a>
                 <!--<img src="./img/logo1.1.png" alt="">-->
         </div>
                 <p>

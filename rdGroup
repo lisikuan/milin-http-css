@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .profile {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #ccc;
+            margin: 0 auto 10px;
+            line-height: 100px;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .avatar img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="groupList">
+        <!-- 群聊按钮将在这里动态生成 -->
+    </div>
+    <div id="chatWindow"></div>
+    <input type="text" id="messageInput" placeholder="Type your message">
+    <button id="sendButton">Send</button>
+
+    <script>
+        var apiBaseUrl = 'https://server-tni-serverllication-jlocxabspm.cn-hangzhou.fcapp.run';
+        var username = ""; // Default group chat
+
+        async function getGroups() {
+            const response = await fetch(apiBaseUrl + "/getGroups");
+            const data = await response.json();
+            if (data.groups) {
+                var groupList = document.getElementById('groupList');
+                groupList.innerHTML = '';
+                // 随机选择一些群聊
+                const selectedGroups = data.groups.sort(() => 0.5 - Math.random()).slice(0, 5);
+                selectedGroups.forEach(function(group) {
+                    var button = document.createElement('button');
+                    button.className = 'groupButton';
+                    button.id = group.id;
+                    button.textContent = group.username;
+                    button.addEventListener('click', function() {
+                        username = this.id;
+                        getMessages();
+                    });
+                    groupList.appendChild(button);
+                });
+                // 默认选择第一个群聊
+                if (selectedGroups.length > 0) {
+                    username = selectedGroups[0].id;
+                }
+            } else {
+                alert(data.error);
+            }
+        }
+
+        function getMessages() {
+            fetch(apiBaseUrl + "/messages?username=" + username)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.chat) {
+                        var chatWindow = document.getElementById('chatWindow');
+                        chatWindow.innerHTML = '';
+                        data.chat.forEach(function(msg) {
+                            chatWindow.innerHTML += '<p>' + msg.sender + ': ' + msg.message + '</p>';
+                        });
+                    } else {
+                        alert(data.error);
+                    }
+                });
+        }
+
+        function addMessage(message) {
+            fetch(apiBaseUrl + "/message", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({message: message, senderUsername: "User", receiverUsername: username})
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        getMessages();
+                        document.getElementById('messageInput').value = '';
+                    } else {
+                        alert('Message not sent');
+                    }
+                });
+        }
+
+        window.onload = function() {
+            getGroups();
+            getMessages();
+            document.getElementById('sendButton').addEventListener('click', function() {
+                var message = document.getElementById('messageInput').value;
+                if (message) {
+                    addMessage(message);
+                }
+            });
+        };
+    </script>
+</body>
+</html>

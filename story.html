@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>觅林密语</title>
+    <link rel="stylesheet" href="story.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="lside.css">
+    <script>
+    window.onload = function() {    
+    var inputElement = document.getElementById('mes');    
+    var buttonElement = document.getElementById('uploadButton');    
+    var paragraphElement = document.getElementById('display');    
+        
+    buttonElement.onclick = function() {    
+        var inputValue = inputElement.value;    
+        // 创建一个新的 <br> 元素  
+        var brElement = document.createElement('br');  
+        var hrElement = document.createElement('hr');
+        // 追加文本和一个 <br> 元素到段落中  
+        paragraphElement.appendChild(document.createTextNode(inputValue));  
+        paragraphElement.appendChild(brElement);
+        paragraphElement.appendChild(brElement);
+        paragraphElement.appendChild(hrElement);   
+        inputElement.value = ''; // 清空input    
+        alert("已成功续写");    
+    };    
+};
+    </script>
+</head>
+<body>
+    <main class="ma">
+        <!-- 头部区域开始 -->
+        <div class="header w">
+            <!-- 第一行logo -->
+            <div class="logo">
+                <img src="./img/logo1.png" alt="">
+            </div>
+            <!-- 第一行导航栏 -->
+            <div class="nav w">
+                <ul class="homepage">
+                    <li> <a href="index.html">首页</a> </li>
+                    <li> <a href="rule.html">活跃度细则</a></li>
+                    <li> <a href="milin.html">登录</a></li>
+                </ul>
+            </div>
+            <!-- 第一行搜索框 -->
+            <div class="search">
+                <input type="text" id="word">
+                <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
+                <button id="check" onclick="SearchMessage()">搜索</button>
+            </div>
+            <!-- 第一行用户区 -->
+            <div class="user" style="display: flex; align-items: center; justify-content: center; height: 42px;">  
+                <img src="./img/user(1).png" alt="">    
+                    <a href="user.html" style="font-size: 18px;">用户</a>  
+            </div>   
+        </div>
+        <!-- 头部区域结束 -->
+        <!-- 精品推荐导航部分开始 -->
+        <div class="goods w">
+            <h3>模块分类</h3>
+            <ul>
+                <li>
+                    <a href="gg.html">公告</a>
+                </li>
+                <li>
+                    <a href="company.html">校园搭子</a>
+                </li>
+                <li>
+                    <a href="group.html">同好集群</a>
+                </li>
+                <li>
+                    <a href="milin tree hole.html">觅林树洞</a>
+                </li>
+                <li>
+                    <a href="secret.html">觅林密语</a>
+                </li>
+                <li>
+                    <a href="chat.html">随机群聊</a>
+                </li>
+            </ul>
+            <a class="mod" href="#">更多</a>
+        </div>
+        </div>
+    <!-- 精品推荐导航部分结束 -->
+        <div class="contain">
+            <div class="lside">
+                <a href="gg.html">
+                    <h2>公告</h2>
+                <hr><br><br>
+                <p>
+                    觅林密语模块：每日会根据心理健康版图对用户发放心理鸡汤小卡片；对于偶尔厌倦了社交，想放松一下，暂时的远离人群的小伙伴，这个板块有很多放松的契机，如海龟汤小故事单人解密，多人续写故事，幽默笑话品鉴等等，还可以挑战觅林官方暗号，暗号核对成功可获得不同的称号等等。<br>
+                </p></a>         
+            </div>
+            <div class="content">
+                <a style="text-align: left;font-size: 16px;" href="secret.html">返回心灵鸡汤</a>
+                <div class="c-box">
+                    <h2>多人续写NO.1</h2>
+                    <p>  地球上的最后一个人孤独地坐在屋子里，这时，忽然响起了敲门声……
+                        <br>
+                        <hr>
+                        
+                    </p>
+                    <p id="display">续写：</p>
+                </div>
+                <input type="text" id="mes" name="mes" placeholder="输入续写内容">
+                <button id="uploadButton">上传</button>
+                <!--<script src="story.js"></script>-->
+                <br>
+            </div>
+        </div>
+        <!-- 底部模块开始 -->
+    <div class="footer">
+        <div class="w">
+            <div class="copyright">
+                <a href="#" class="cc">下载觅林App</a>
+                <div class="container">
+                <a href="#" class="shadow">Milin</a>
+                <!--<img src="./img/logo1.1.png" alt="">-->
+        </div>
+                <p>
+                   友情连接、项目条款、声明
+                    <br>
+                    © “觅林”项目开发组保留所有权利。
+                    <br> “觅林”意为“在使用我们的开发项目后能够像走迷宫一样发现独属于自己的那颗树（那个人）”。
+                </p>
+            </div> 
+            <div class="links">
+                <dl>
+                    <dt>关于“觅林”</dt>
+                    <dd> <a href="#">关于 </a> </dd>
+                    <dd> <a href="#">管理团队</a> </dd>
+                    <dd> <a href="#">工作机会</a> </dd>
+                    <dd> <a href="#">客户服务</a> </dd>
+                    <dd> <a href="#">帮助 </a> </dd>
+                </dl>
+                <dl>
+                    <dt>友情链接</dt>
+                    <dd><a href="http://dekt.bupt.edu.cn" target="_blank">第二课堂</a></dd>
+                    <dd><a href="http://static.byr.cn" target="_blank">北邮人论坛</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!-- 底部模块结束 -->
+    </div>
+    </main>
+</body>
+</html>

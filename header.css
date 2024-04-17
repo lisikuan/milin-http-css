@@ -22,7 +22,6 @@
    
   .body {
       background-color: #f3f5f7;
-  
   }
   .w {
       width: 1200px;
@@ -54,15 +53,16 @@ a:hover {
   /* 头部区域的样式 */
   .header {
     height: var(--header-height);
-      background: #ffffff;
+      background: #84c9fd;
+      border-radius: 10px 10px 10px 10px;
+      
   }
    
   /* logo部分 */
   .logo {
     float: left;
-    width: 60px;
-    height:60px;
- 
+    width: 50px;
+    height:50px;
 }
 
   .logo img{
@@ -70,7 +70,7 @@ a:hover {
       height:85%;
       border-radius: 50%;
       cursor: pointer;
-transition: all 0.6s;
+      transition: all 0.6s;
   }
   .logo img:hover{
     transform: scale(1.2);
@@ -127,6 +127,11 @@ transition: all 0.6s;
        border-radius: 50%
   }
 
+  .user a{
+    text-align: center;
+    font-size: 20px;
+  }
+
   .user a:hover{
     color: var(--main-color);
   }
@@ -179,14 +184,14 @@ border-color:#000 ;
     color: var(--main-color);  
   }
     
-  /* 右侧用户区部分 */
+  /* 右侧用户区部分
   .course {
       float:right;
       width: 230px;
       height: 300px;
       margin-top:50px;
       background-color: #fff;
-  }
+  } */
    
    
   .bd {
@@ -198,8 +203,7 @@ border-color:#000 ;
       font-weight:400;
       color:#fff;
       text-align:center;
-      background-color: #9bceea;
-      
+      background-color: #6bc0ee;
   }
    
   .course ul li {
@@ -208,13 +212,12 @@ border-color:#000 ;
   }
    
   .course ul li h4 {
-      font-size:16px;
+      font-size:20px;
       color: #4e4e4e;
-     
   }
    
   .course ul li p {
-      font-size:12px;
+      font-size:14px;
       color:#a5a5a5;
   }
    
@@ -224,14 +227,15 @@ border-color:#000 ;
       line-height: 38px;
       text-align:center;
       color:#42aaff;
-      font-size:16px;
+      font-size:20px;
       font-weight: 700;
       border: 1px solid #00a4ff;
       margin:5px;
+      border-radius: 10px 10px 10px 10px;
   }
    
   .more:hover{
-    color:#000;
+    color:red;
   }
   /* 精品推荐部分 */
   .goods {
@@ -241,6 +245,7 @@ border-color:#000 ;
   margin-top: 10px; 
   display: flex; /* 使用Flexbox进行布局 */  
   align-items: center; /* 垂直居中对齐子元素 */  
+  border-radius: 20px 20px 20px 20px;
   }
    
   /* 标题部分 */
@@ -261,7 +266,7 @@ border-color:#000 ;
     display: inline-block;  
   }
   .goods ul li a {
-    padding: 0 30px;  
+    padding: 0 40px;  
     font-size: 16px;  
     color: #050505;  
     border-left: 1px solid #cccccc;  
@@ -283,25 +288,20 @@ border-color:#000 ;
   } 
    
  
-/*欢迎来到觅林*/   
-      /*.ab {
-        color: green;
-        text-shadow: 0 0 0.3em rgba(200, 200, 255, 0.3), 0.04em 0.04em 0 white,
-            0.045em 0.045em 0 #88e, 0.09em 0.09em 0 white, 0.095em 0.095em 0 #66c,
-            0.14em 0.14em 0 white, 0.145em 0.145em 0 #44a;
-        animation: pulsea 300ms ease infinite alternate;
-    }*/
-    .con {
+/*欢迎来到觅林  */
+      
+/*    .con {
         height:130px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        /*transform: rotateX(25deg) rotateY(-25deg);*/
+        transform: rotateX(25deg) rotateY(-25deg);
         margin: auto;
         border-radius: 10px 10px 10px 10px;
         background-color: white;
-    }
+    } 
+    */
     /*
     .con p {
         text-align: center;
@@ -373,3 +373,44 @@ border-color:#000 ;
           transform: translate(-50%, -50%) rotate(360deg);  
       }  
   }*/
+
+/*4.17新增*/
+  main {  
+    width: 100%;  
+    margin: auto;  
+    padding: 59px 29px;  
+    border-radius: 0.3em;  
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.3);  
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.3) inset, 0 0.3em 1em rgba(0, 0, 0, 0.12);  
+    font: 150%/1.6 Baskerville, Palatino, serif;  
+  }  
+  main, main > div::before {  
+    background: url(./img/index2.1.png) fixed 0 / cover;  
+  }  
+  ma > div::before {  
+    content: "";  
+    position: absolute;  
+    top: 0;  
+    right: 0;  
+    bottom: 0;  
+    left: 0;  
+    z-index: -1;  
+    filter: blur(10px);  
+    margin: -30px;  
+  }  
+  ma > div {  
+    font-style: italic;  
+    color: #000;  
+    padding: 30px;  
+    hyphens: auto;  
+    background: hsla(0, 0%, 100%, 0.5);  
+    overflow: hidden;  
+    position: relative;  
+  }   
+  .ma {
+  color:white;
+  text-align: center;
+  }
+  .content h3{
+    text-align: left;
+  }

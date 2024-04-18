@@ -1,0 +1,103 @@
+/*
+.contain {
+    position: relative;
+    height: 85vh;
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 85vh;
+        text-align: center;
+        margin: auto;
+}
+
+.lside,.rside,.content,.contain {
+    height: 85vh;
+    text-align: center;
+
+}
+
+.lside {
+border: 2px solid black;
+border-radius: 10px 10px 10px 10px;
+
+order: 1;
+flex: 400px 0 0;
+background: #fff0b6;
+}
+
+.rside {
+border: 2px solid black;
+border-radius: 10px 10px 10px 10px;
+
+order: 3;
+flex: 400px 0 0;
+background: rgb(213, 240, 255);
+}
+.rside a:hover{
+color: #3fa9ff;
+  border-bottom: 2px solid #00acfd;
+
+} 
+*/
+.content {
+order: 2;
+flex: auto 1 0 ;
+background: #78facf;
+margin-left: 400px;
+border-radius: 20px 20px 20px 20px;
+}
+
+#chatWindow, #groupList {
+    height: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(71, 21, 21, 0.1);
+}
+#groupList {
+    width: 400px;
+}
+#chatWindow {
+    width: 400px;
+    background-color: #fff;
+}
+#messageInput {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+#sendButton {
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#sendButton:hover {
+    background-color: #0056b3;
+}
+.groupButton {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.groupButton:hover {
+    background-color: #0056b3;
+}

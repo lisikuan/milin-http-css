@@ -41,16 +41,17 @@
 .content {
     order: 2;
     flex: auto 1 0 ;
-    background: #ffffff;
+    color:black;
 }
 
 #wrapper {
     margin-left: 100px;
     width: 846px;
     height:500px;
-    border: 2px solid blue;
+    border: 2px solid black;
     margin: auto;
     overflow: auto;
+    background: white;
 }
 
 

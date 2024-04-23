@@ -62,3 +62,23 @@ text-align: center;
 .content h3{
     text-align: left;
 }
+
+.profile {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 auto 10px;
+  line-height: 100px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.avatar img {
+  max-width: 100%;
+}

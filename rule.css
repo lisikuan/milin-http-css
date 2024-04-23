@@ -1,168 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="milin tree hole.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="lside.css">
-    <title>觅林树洞</title>
-    <script>
-        // 在文档加载完成后执行  
-document.addEventListener('DOMContentLoaded', function() {  
-    // 选择ID为 "myInput" 的input元素  
-    var inp = document.querySelector('#inp');  
-      
-    // 确保找到了input元素  
-    if (inp) {  
-        // 为ID为 "pick" 的按钮添加点击事件监听器  
-        var pickButton = document.querySelector('#pick');  
-        if (pickButton) {  
-            pickButton.addEventListener('click', function() {  
-                // 清空input元素的内容  
-                inp.value = '';
-                alert("正在捡起信件ing……"); 
-            });  
-        } else {  
-            console.error('未找到ID为 "pick" 的按钮。');  
-        }  
-  
-        // 为ID为 "shoot" 的按钮添加点击事件监听器  
-        var shootButton = document.querySelector('#shoot');  
-        if (shootButton) {  
-            shootButton.addEventListener('click', function() {  
-                // 清空input元素的内容  
-                inp.value = '';  
-                alert("已投递成功！");
-            });  
-        } else {  
-            console.error('未找到ID为 "shoot" 的按钮。');  
-        }  
-    } else {  
-        console.error('未找到ID为 "inp" 的input元素。');  
-    }  
-});
-    </script>
-</head>
-<body>
-    <main class="ma">
-        <!-- 头部区域开始 -->
-        <div class="header w">
-            <!-- 第一行logo -->
-            <div class="logo">
-                <img src="./img/logo1.png" alt="">
-            </div>
-            <!-- 第一行导航栏 -->
-            <div class="nav w">
-                <ul class="homepage">
-                    <li> <a href="index.html">首页</a> </li>
-                    <li> <a href="rule.html">活跃度细则</a></li>
-                    <li> <a href="milin.html">登录</a></li>
-                </ul>
-            </div>
-            <!-- 第一行搜索框 -->
-            <div class="search">
-                <input type="text" id="word">
-                <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
-                <button id="check" onclick="SearchMessage()">搜索</button>
-            </div>
-            <!-- 第一行用户区 -->
-            <div class="user" style="display: flex; align-items: center; justify-content: center; height: 42px;">  
-                <img src="./img/user(1).png" alt="">    
-                    <a href="user.html" style="font-size: 18px;">用户</a>  
-            </div>   
-        </div>
-        <!-- 头部区域结束 -->
-        <!-- 精品推荐导航部分开始 -->
-        <div class="goods w">
-            <h3>模块分类</h3>
-            <ul>
-                <li>
-                    <a href="gg.html">公告</a>
-                </li>
-                <li>
-                    <a href="company.html">校园搭子</a>
-                </li>
-                <li>
-                    <a href="group.html">同好集群</a>
-                </li>
-                <li>
-                    <a href="milin tree hole.html">觅林树洞</a>
-                </li>
-                <li>
-                    <a href="secret.html">觅林密语</a>
-                </li>
-                <li>
-                    <a href="chat.html">随机群聊</a>
-                </li>
-            </ul>
-            <a class="mod" href="#">更多</a>
-        </div>
-        </div>
-    <!-- 精品推荐导航部分结束 -->
-        <div class="contain">
-            <div class="lside">
-                <a href="gg.html">
-                    <h2>公告</h2>
-                <hr><br><br>
-                <p>
-                    觅林树洞：该模块拥有两种模式，一是在用户注册登录时自动生成一个好友信封，在随机时间发给随机对象，经过双方同意后，生成一段美丽的邂逅。二是类似于漂流瓶，自己想说的话，想写的文案，自己的小故事或小确幸统统可以塞进树洞里，等待有缘人的开启。<br>          
-                </p></a>
-            </div>
-            <div class="content">
-                <h2 style="font-weight:bold">觅林树洞</h2>
-                    
-                <div class="import">
-                <img src="./img/sd1.png" alt="">
-                <!--<div id="wrapper"></div>-->
-                </div>
-                <br>
-                <input type="text" id="inp"><br>
-                    <button id="shoot">投递</button>
-                    <button id="pick">捡起</button>
-                 
-                <script src="milin tree hole.js"></script>
-                <br>
-            </div>
-        </div>
-        <!-- 底部模块开始 -->
-    <div class="footer">
-        <div class="w">
-            <div class="copyright">
-                <a href="#" class="cc">下载觅林App</a>
-                <!--<div class="rainbow"></div>-->
-                <div class="container">
-                <a href="#" class="shadow">milin</a>
-                
-        </div>
-                <p>
-                   友情连接、项目条款、声明
-                    <br>
-                    © “觅林”项目开发组保留所有权利。
-                    <br> “觅林”意为“在使用我们的开发项目后能够像走迷宫一样发现独属于自己的那颗树（那个人）”。
-                </p>
-            </div> 
-            <div class="links">
-                <dl>
-                    <dt>关于“觅林”</dt>
-                    <dd> <a href="#">关于 </a> </dd>
-                    <dd> <a href="#">管理团队</a> </dd>
-                    <dd> <a href="#">工作机会</a> </dd>
-                    <dd> <a href="#">客户服务</a> </dd>
-                    <dd> <a href="#">帮助 </a> </dd>
-                </dl>
-                <dl>
-                    <dt>友情链接</dt>
-                    <dd><a href="http://dekt.bupt.edu.cn" target="_blank">第二课堂</a></dd>
-                    <dd><a href="http://static.byr.cn" target="_blank">北邮人论坛</a></dd>
-                </dl>
-            </div>
-        </div>
-    </div>
-    <!-- 底部模块结束 -->
-    </div>
-    </main>
-</body>
-</html>
+/*
+.contain {
+    position: relative;
+    height: 85vh;
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.lside,.rside,.content,.contain {
+        height: 85vh;
+        text-align: center;
+
+}
+
+.lside {
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+
+    order: 1;
+    flex: 400px 0 0;
+    background: #fff0b6;
+}
+
+.rside {
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+    
+    order: 3;
+    flex: 400px 0 0;
+    background: rgb(213, 240, 255);
+}
+.rside a:hover{
+    color: #3fa9ff;
+      border-bottom: 2px solid #00acfd;
+
+} 
+*/
+.content {
+    order: 2;
+    flex: auto 1 0 ;
+}
+
+#wrapper {
+    width: 846px;
+    height:300px;
+    border: 2px solid blue;
+    margin: 20px 0;
+    overflow: auto;
+}
+
+
+.wrapper input {
+    width: 50px;
+    height: 20px;
+}
+
+.wrapper button {
+    width: 50px;
+    height: 20px;
+}
+    .cbox h2{
+        color: #000;
+        margin: 20px;
+        text-align: center;
+    }
+    
+    .cbox,tit p{
+        color: #000;
+        margin: 10px;
+        font-size:18px;
+        text-align: left;
+    }
+    
+    
+    .cbox:hover{
+        scale:1.03;
+        box-shadow: none;
+    }
+
+    .cbox{
+        width: 700px;
+        height: 550px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px 0px lightgray;
+    border-radius: 10px;
+    transition: 0.6s;
+    background: #4fc2fc;
+    }
+    .tit{
+        width: 700px;
+        height: 160px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px 0px lightgray;
+    border-radius: 10px;
+    transition: 0.6s;
+    background: #4ffcd9;
+    }
+    .content button{
+        width: 100px;
+        height: 50px;
+        border-radius: 5px 5px 5px 5px;
+        background-color: #4ffca0;
+        color:#000;
+    }
+    .content button:hover{
+        color:red;
+        background-color: #ffffff;
+    }

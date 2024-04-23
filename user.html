@@ -70,12 +70,13 @@
                 </div>  
             <div class="contain">
             <div class="content">
-                <div class="pic">
-                <img src="./img/user.png" alt="">    
+            <div class="profile">
+                <div class="avatar" id="avatar">添加头像</div>
+                <h2 id="username"></h2>
+                <p>经验值：<span id="experience"></span></p>
             </div>
+            <input type="file" id="fileInput" style="display: none;">
             <br>
-            <h3>用户头像:</h3>
-            <hr><br><br>
             <h3>用户名:</h3>
             <hr><br><br>
             <h3>称号:</h3>
@@ -119,5 +120,47 @@
        
     </div>
 </main>
+<script>
+    const apiBaseUrl = 'https://server-tni-serverllication-jlocxabspm.cn-hangzhou.fcapp.run';
+    const userId = localStorage.getItem('userId'); // 从localStorage获取用户ID
+    const username = localStorage.getItem('username'); // 从localStorage获取用户名
+
+    async function getUserInfo() {
+        const avatarResponse = await fetch(`${apiBaseUrl}/getAvatar?userId=${userId}`);
+        const avatarData = await avatarResponse.json();
+        if (avatarData.avatar) {
+            document.getElementById('avatar').innerHTML = '<img src="data:image/png;base64,' + avatarData.avatar + '">';
+        }
+
+        const experienceResponse = await fetch(`${apiBaseUrl}/getExperience?userId=${userId}`);
+        const experienceData = await experienceResponse.json();
+        document.getElementById('experience').textContent = experienceData.experience;
+
+        document.getElementById('username').textContent = username; // 从localStorage获取用户名
+    }
+
+    document.getElementById('avatar').addEventListener('click', function() {
+        document.getElementById('fileInput').click();
+    });
+
+    document.getElementById('fileInput').addEventListener('change', async function() {
+        const file = this.files[0];
+        const reader = new FileReader();
+        reader.onloadend = async function() {
+            const base64String = reader.result.replace('data:', '').replace(/^.+,/, '');
+            await fetch(`${apiBaseUrl}/uploadAvatar`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ userId, avatar: base64String })
+            });
+            getUserInfo();
+        }
+        reader.readAsDataURL(file);
+    });
+
+    getUserInfo();
+</script>
 </body>
 </html>

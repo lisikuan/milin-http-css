@@ -40,7 +40,6 @@
 .content {
     order: 2;
     flex: auto 1 0 ;
-    background: #ffffff;
 }
 
 #wrapper {
@@ -64,12 +63,13 @@
     .cbox h2{
         color: #000;
         margin: 20px;
+        text-align: center;
     }
     
-    .cbox p{
+    .cbox,tit p{
         color: #000;
         margin: 10px;
-        font-size:16px;
+        font-size:18px;
         text-align: left;
     }
     
@@ -81,7 +81,7 @@
 
     .cbox{
         width: 700px;
-        height: 500px;
+        height: 550px;
     margin: 20px;
     position: relative;
     display: inline-block;
@@ -89,4 +89,26 @@
     border-radius: 10px;
     transition: 0.6s;
     background: #4fc2fc;
+    }
+    .tit{
+        width: 700px;
+        height: 160px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px 0px lightgray;
+    border-radius: 10px;
+    transition: 0.6s;
+    background: #4ffcd9;
+    }
+    .content button{
+        width: 100px;
+        height: 50px;
+        border-radius: 5px 5px 5px 5px;
+        background-color: #4ffca0;
+        color:#000;
+    }
+    .content button:hover{
+        color:red;
+        background-color: #ffffff;
     }

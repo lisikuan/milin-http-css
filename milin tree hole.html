@@ -9,130 +9,98 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="lside.css">
     <title>觅林树洞</title>
+    <script>
+        // 在文档加载完成后执行  
+document.addEventListener('DOMContentLoaded', function() {  
+    // 选择ID为 "myInput" 的input元素  
+    var inp = document.querySelector('#inp');  
+      
+    // 确保找到了input元素  
+    if (inp) {  
+        // 为ID为 "pick" 的按钮添加点击事件监听器  
+        var pickButton = document.querySelector('#pick');  
+        if (pickButton) {  
+            pickButton.addEventListener('click', function() {  
+                // 清空input元素的内容  
+                inp.value = '';
+                alert("正在捡起信件ing……"); 
+            });  
+        } else {  
+            console.error('未找到ID为 "pick" 的按钮。');  
+        }  
+  
+        // 为ID为 "shoot" 的按钮添加点击事件监听器  
+        var shootButton = document.querySelector('#shoot');  
+        if (shootButton) {  
+            shootButton.addEventListener('click', function() {  
+                // 清空input元素的内容  
+                inp.value = '';  
+                alert("已投递成功！");
+            });  
+        } else {  
+            console.error('未找到ID为 "shoot" 的按钮。');  
+        }  
+    } else {  
+        console.error('未找到ID为 "inp" 的input元素。');  
+    }  
+});
+    </script>
 </head>
 <body>
-    <div class="main">
+    <main class="ma">
         <!-- 头部区域开始 -->
-    <div class="header w">
-        <!-- 第一行logo -->
-        <div class="logo">
-            <img src="./img/logo1.png" alt="">
-        </div>
-        <!-- 第一行导航栏 -->
-        <div class="nav w">
-            <ul class="homepage">
-                <li> <a href="index.html">首页</a> </li>
-                <li> <a href="rule.html">活跃度细则</a></li>
-                <li> <a href="milin.html">登录</a></li>
-            </ul>
-        </div>
-        <!-- 第一行搜索框 -->
-        <div class="search">
-            <input type="text">
-            <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
-            <button id="check">搜索</button>
-        </div>
-        <!-- 第一行用户区 -->
-        <div class="user">
-            <img src="./img/1(2).jpg" alt="">
-            <a href="user.html">用户</a>
-            
-        </div>
-    </div>
-    <!-- 头部区域结束 -->
-    <!-- banner部分开始 -->
-    <div class="banner ">
-        <div class="w">
-            <!-- 侧边导航栏 -->
-            <div class="subnav">
-                <ul><li>
-                        <a href="logo.html">logo详情</a>
-                        <span> -> </span>
-                    </li>
-                    <li>
-                        <a href="gg.html">公告</a>
-                        <span> -> </span>
-                    </li>
-                    
-                    <li>
-                        <a href="company.html">校园搭子</a>
-                        <span> -> </span>
-                    </li>
- 
-                    <li>
-                        <a href="group.html">同好集群</a>
-                        <span> -> </span>
-                    </li>
- 
-                    <li>
-                        <a href="milin tree hole.html">觅林树洞</a>
-                        <span> -> </span>
-                    </li>
- 
-                    <li>
-                        <a href="secret.html">觅林密语</a>
-                        <span> -> </span>
-                    </li>
-                    <li>
-                        <a href="chat.html">随机群聊</a>
-                        <span> -> </span>
-                    </li>
+        <div class="header w">
+            <!-- 第一行logo -->
+            <div class="logo">
+                <img src="./img/logo1.png" alt="">
+            </div>
+            <!-- 第一行导航栏 -->
+            <div class="nav w">
+                <ul class="homepage">
+                    <li> <a href="index.html">首页</a> </li>
+                    <li> <a href="rule.html">活跃度细则</a></li>
+                    <li> <a href="milin.html">登录</a></li>
                 </ul>
- 
             </div>
-            <!-- 右边课程表 -->
-            <div class="course">
-                <h3>热门内容：</h3>
-                <div class="bd">
-                    <ul>
-                        <li>
-                            <h4>校园搭子</h4>
-                            <p>已开发</p>
-                        </li>
-                        <li>
-                            <h4>觅林树洞</h4>
-                            <p>已开发</p>
-                        </li>
-                        <li>
-                            <h4>觅林密语</h4>
-                            <p>已开发</p>
-                        </li>
-                        <a class="more" href="milin.html">开始探索！</a>
-                    </ul>
- 
-                </div>
+            <!-- 第一行搜索框 -->
+            <div class="search">
+                <input type="text" id="word">
+                <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
+                <button id="check" onclick="SearchMessage()">搜索</button>
             </div>
+            <!-- 第一行用户区 -->
+            <div class="user" style="display: flex; align-items: center; justify-content: center; height: 42px;">  
+                <img src="./img/user(1).png" alt="">    
+                    <a href="user.html" style="font-size: 18px;">用户</a>  
+            </div>   
         </div>
-    </div>
-    <!-- 精品推荐导航部分开始 -->
-    <div class="goods w">
-        <h3>模块分类</h3>
-        <ul>
-            <li>
-                <a href="logo.html">logo详情</a>
-            </li>
-            <li>
-                <a href="gg.html">公告</a>
-            </li>
-            <li>
-                <a href="company.html">校园搭子</a>
-            </li>
-            <li>
-                <a href="group.html">同好集群</a>
-            </li>
-            <li>
-                <a href="milin tree hole.html">觅林树洞</a>
-            </li>
-            <li>
-                <a href="secret.html">觅林密语</a>
-            </li>
-            <li>
-                <a href="chat.html">随机群聊</a>
-            </li>
-        </ul>
-        <a class="mod" href="#">更多</a>
-    </div>
-    </div>
+        <!-- 头部区域结束 -->
+        <!-- 精品推荐导航部分开始 -->
+        <div class="goods w">
+            <h3>模块分类</h3>
+            <ul>
+                <li>
+                    <a href="gg.html">公告</a>
+                </li>
+                <li>
+                    <a href="company.html">校园搭子</a>
+                </li>
+                <li>
+                    <a href="group.html">同好集群</a>
+                </li>
+                <li>
+                    <a href="milin tree hole.html">觅林树洞</a>
+                </li>
+                <li>
+                    <a href="secret.html">觅林密语</a>
+                </li>
+                <li>
+                    <a href="chat.html">随机群聊</a>
+                </li>
+            </ul>
+            <a class="mod" href="#">更多</a>
+        </div>
+        </div>
     <!-- 精品推荐导航部分结束 -->
         <div class="contain">
             <div class="lside">
@@ -195,5 +163,6 @@
     </div>
     <!-- 底部模块结束 -->
     </div>
+    </main>
 </body>
 </html>

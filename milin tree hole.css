@@ -1,45 +1,7 @@
-/*.contain {
-    position: relative;
-    height: 85vh;
-    min-width: 400px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
 
-.lside,.rside,.content,.contain {
-        height: 85vh;
-        text-align: center;
-
-}
-
-.lside {
-    border: 2px solid black;
-    border-radius: 10px 10px 10px 10px;
-
-    order: 1;
-    flex: 400px 0 0;
-    background: #fff0b6;
-}
-
-.rside {
-    border: 2px solid black;
-    border-radius: 10px 10px 10px 10px;
-    
-    order: 3;
-    flex: 400px 0 0;
-    background: rgb(213, 240, 255);
-}
-.rside a:hover{
-    color: #3fa9ff;
-      border-bottom: 2px solid #00acfd;
-
-} 
-*/
 .content {
     order: 2;
     flex: auto 1 0 ;
-    background: #ffffff;
 }
 
 #wrapper {
@@ -65,7 +27,7 @@
         float: left;
         width: 1200px;
         height:600px;
-        border: 2px solid rgb(8, 8, 8);
+        border: 2px solid rgb(255, 255, 255);
         margin-left: 180px;
     }
     .import img{

@@ -9,138 +9,111 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="lside.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {  
+    const scoreElement = document.getElementById('score');  
+    const titleElement = document.getElementById('title');  
+    const addScoreButton = document.getElementById('addScore');  
+    let score = 0;  
+    
+    function updateTitle() {  
+      switch (true) {
+        case score >= 10000:  
+          titleElement.textContent = '万众瞩目';  
+          break;    
+        case score >= 1000:  
+          titleElement.textContent = '千载难逢';  
+          break;
+          case score >= 250:  
+          titleElement.textContent = '智商MAX';  
+          break;    
+        case score >= 100:  
+          titleElement.textContent = '百里挑一';  
+          break;
+          case score >= 80:  
+          titleElement.textContent = '锋芒毕露';  
+          break;  
+          case score >= 50:  
+          titleElement.textContent = '独步一方';  
+          break;  
+          case score >= 20:  
+          titleElement.textContent = '小有所成';  
+          break;    
+        case score >= 10:  
+          titleElement.textContent = '渐入佳境';  
+          break;  
+        default:  
+          titleElement.textContent = '初出茅庐';  
+      }  
+    }  
+    
+    addScoreButton.addEventListener('click', function() {  
+      score += 5;  
+      scoreElement.textContent = score;  
+      updateTitle();  
+    });  
+    
+    // 初始化称号  
+    updateTitle();  
+  });
+    </script>
+
 </head>
 <body>
-    <div class="main">
+    <main class="ma">
         <!-- 头部区域开始 -->
-    <div class="header w">
-        <!-- 第一行logo -->
-        <div class="logo">
-            <img src="./img/logo1.png" alt="">
-        </div>
-        <!-- 第一行导航栏 -->
-        <div class="nav w">
-            <ul class="homepage">
-                <li> <a href="index.html">首页</a> </li>
-                <li> <a href="#">活跃度细则</a></li>
-                <li> <a href="milin.html">登录</a></li>
-            </ul>
-        </div>
-        <!-- 第一行搜索框 -->
-        <div class="search">
-            <input type="text" value="输入关键词">
-            <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
-            <button id="check">搜索</button>
-        </div>
-        <!-- 第一行用户区 -->
-        <div class="user">
-            <img src="./img/1(2).jpg" alt="">
-            <a href="user.html">用户</a>
-            
-        </div>
-    </div>
-    <!-- 头部区域结束 -->
-    <!-- banner部分开始 -->
-    <div class="banner ">
-        <div class="w">
-            
-            <!-- 侧边导航栏 -->
-            <div class="subnav">
-                <ul><li>
-                        <a href="logo.html">logo详情</a>
-                        <span> -> </span>
-                    </li>
-                    <li>
-                        <a href="gg.html">公告</a>
-                        <span> -> </span>
-                    </li>
-                
-                    <li>
-                        <a href="company.html">校园搭子</a>
-                        <span> -> </span>
-                    </li>
- 
-                    <li>
-                        <a href="group.html">同好集群</a>
-                        <span> -> </span>
-                    </li>
- 
-                    <li>
-                        <a href="milin tree hole.html">觅林树洞</a>
-                        <span> -> </span>
-                    </li>
- 
-                    <li>
-                        <a href="secret.html">觅林密语</a>
-                        <span> -> </span>
-                    </li>
- 
-            
- 
-                    <li>
-                        <a href="chat.html">随机群聊</a>
-                        <span> -> </span>
-                    </li>
+        <div class="header w">
+            <!-- 第一行logo -->
+            <div class="logo">
+                <img src="./img/logo1.png" alt="">
+            </div>
+            <!-- 第一行导航栏 -->
+            <div class="nav w">
+                <ul class="homepage">
+                    <li> <a href="index.html">首页</a> </li>
+                    <li> <a href="rule.html">活跃度细则</a></li>
+                    <li> <a href="milin.html">登录</a></li>
                 </ul>
- 
             </div>
-            <!-- 右边课程表 -->
-            <div class="course">
-                <h3>热门内容：</h3>
-                <div class="bd">
-                    <ul>
-                        <li>
-                            <h4>校园搭子</h4>
-                            <p>已开发</p>
-                        </li>
-                        <li>
-                            <h4>觅林树洞</h4>
-                            <p>已开发</p>
-                        </li>
-                        <li>
-                            <h4>觅林密语</h4>
-                            <p>已开发</p>
-                        </li>
-                        <a class="more" href="milin.html">开始探索！</a>
-                    </ul>
- 
-                </div>
+            <!-- 第一行搜索框 -->
+            <div class="search">
+                <input type="text" id="word">
+                <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
+                <button id="check" onclick="SearchMessage()">搜索</button>
             </div>
+            <!-- 第一行用户区 -->
+            <div class="user" style="display: flex; align-items: center; justify-content: center; height: 42px;">  
+                <img src="./img/user(1).png" alt="">    
+                    <a href="user.html" style="font-size: 18px;">用户</a>  
+            </div>   
         </div>
-    </div>
-    
-    <!-- 精品推荐导航部分开始 -->
-    <div class="goods w">
-        <h3>模块分类</h3>
-        <ul><li>
-            <a href="logo.html">logo详情</a>
-
-        </li>
-        <li>
-            <a href="gg.html">公告</a>
-
-        </li>
-            <li>
-                <a href="company.html">校园搭子</a>
-            </li>
-            <li>
-                <a href="group.html">同好集群</a>
-            </li>
-            
-            <li>
-                <a href="milin tree hole.html">觅林树洞</a>
-            </li>
-            <li>
-                <a href="secret.html">觅林密语</a>
-            </li>
-            <li>
-                <a href="chat.html">随机群聊</a>
-            </li>
-           
-        </ul>
-        <a class="mod" href="#">更多</a>
-    </div>
-    </div>
+        <!-- 头部区域结束 -->
+        <!-- 精品推荐导航部分开始 -->
+        <div class="goods w">
+            <h3>模块分类</h3>
+            <ul>
+                <li>
+                    <a href="gg.html">公告</a>
+                </li>
+                <li>
+                    <a href="company.html">校园搭子</a>
+                </li>
+                <li>
+                    <a href="group.html">同好集群</a>
+                </li>
+                <li>
+                    <a href="milin tree hole.html">觅林树洞</a>
+                </li>
+                <li>
+                    <a href="secret.html">觅林密语</a>
+                </li>
+                <li>
+                    <a href="chat.html">随机群聊</a>
+                </li>
+            </ul>
+            <a class="mod" href="#">更多</a>
+        </div>
+        </div>
     <!-- 精品推荐导航部分结束 -->
         <div class="contain">
             <div class="lside">
@@ -166,17 +139,22 @@
                         5、觅林密语：浏览时间达3分钟增加10点活跃度，觅林密语核对成功增加10点活跃度每次，每日上限三次。<br>
                         6、牵线搭桥：每日点击链接进入后增加10点活跃度。<br>
                         7、公告：查看公告后点击确定增加10点活跃度。<br>
-                    </p><hr>
+                    </p>
+                    <br>
+                    <hr>
                     <h2>称号系统</h2>
                     <p>
-                        1、核对成功特殊的觅林密语后，可以获得稀有的称号，称号将会在首页的用户旁出现，点击用户界面可以更改。
-                        <br>
-                        2、称号系统目前只能对字体颜色进行更改
+                        核对成功特殊的觅林密语后，可以获得稀有的称号，称号将会在首页的用户旁出现，点击用户界面可以更改。
                         <br>
                     </p>
-                    <h2>其他内容敬请期待......</h2>
                 </div>
                 </a>
+                <br>
+                <div class="tit">
+                    <p>当前分数: <span id="score">0</span></p>  
+  <button id="addScore">增加活跃度</button>  
+  <p>称号: <span id="title">初出茅庐</span></p>
+</div>
                 </div>
             </div>
         </div>
@@ -216,7 +194,6 @@
     </div>
     <!-- 底部模块结束 -->
     </div>
-</body>
-</html>
+    </main>
 </body>
 </html>

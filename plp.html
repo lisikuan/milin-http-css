@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>漂流瓶</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        #bottleForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            padding: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        #bottleMessage {
+            display: none;
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 80%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #buttonContainer {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        #submitBtn, #fetchBtn {
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        #bottleContainer {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="bottleForm">
+        <h2>漂流瓶</h2>
+        <p id="bottleContainer"></p>
+        <textarea id="bottleMessage" placeholder="想说什么呢？"></textarea>
+        <div id="buttonContainer">
+            <button id="submitBtn">扔一个</button>
+            <button id="fetchBtn">捞一个</button>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'https://server-tni-serverllication-jlocxabspm.cn-hangzhou.fcapp.run';
+        const submitBtn = document.getElementById('submitBtn');
+        const fetchBtn = document.getElementById('fetchBtn');
+        const bottleMessage = document.getElementById('bottleMessage');
+        const bottleContainer = document.getElementById('bottleContainer');
+
+        submitBtn.addEventListener('click', async () => {
+            const message = bottleMessage.value;
+            const response = await fetch(`${API_BASE}/bottle`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message })
+            });
+            const data = await response.json();
+            if (data.success) {
+                bottleMessage.value = '';
+                bottleMessage.style.display = 'none';
+            } 
+        });
+
+        fetchBtn.addEventListener('click', async () => {
+            const response = await fetch(`${API_BASE}/bottle`);
+            const bottle = await response.json();
+            if (bottle) {
+                bottleContainer.textContent = bottle.message;
+                bottleMessage.style.display = 'block';
+            } 
+        });
+    </script>
+</body>
+</html>

@@ -1,50 +1,16 @@
-/*
-.contain {
-    position: relative;
-    height: 85vh;
-    min-width: 400px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
 
-.lside,.rside,.content,.contain {
-        height: 85vh;
-        text-align: center;
-}
-
-.lside {
-    border: 2px solid black;
-    border-radius: 10px 10px 10px 10px;
-
-    order: 1;
-    flex: 400px 0 0;
-    background: #fff0b6;
-}
-
-
-*/
-.rside {
-    border-radius: 10px 10px 10px 10px;
-    background: rgb(213, 240, 255);
-    max-width: 400px;
-    order: 3;
-    flex: 400px 0 0;
-}
-.rside a:hover{
-    color: #3fa9ff;
-      border-bottom: 2px solid #00acfd;
-
-} 
 .content {
     order: 2;
     flex: auto 1 0 ;
-    background: #ffffff;
+    background: #97d7fe;
     color:black;
-    margin-left: 200px;
+    max-width: 1200px;
+    margin-left: 120px;
+    border-radius: 40px 40px 40px 40px;
+    border-color: aqua;
 }
 
-#wrapper {
+/*#wrapper {
     width: 846px;
     height:300px;
     border: 2px solid blue;
@@ -89,4 +55,88 @@
 #inp{
     width: 200px;
     height: 50px;
+}
+*/
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+}
+
+#categoryContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.categoryRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category:last-child {
+    border-bottom: none;
+}
+
+.categoryText {
+    cursor: pointer;
+}
+
+.join
+{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.quit {
+    
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 100px;
+        padding: 5px;
+        cursor: pointer;
+    
+}
+
+.category.selected .join {
+    display: inline-block;
+}
+
+#newCategoryContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#newCategoryInput {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }

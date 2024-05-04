@@ -9,42 +9,7 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="lside.css">
     <title>觅林树洞</title>
-    <script>
-        // 在文档加载完成后执行  
-document.addEventListener('DOMContentLoaded', function() {  
-    // 选择ID为 "myInput" 的input元素  
-    var inp = document.querySelector('#inp');  
-      
-    // 确保找到了input元素  
-    if (inp) {  
-        // 为ID为 "pick" 的按钮添加点击事件监听器  
-        var pickButton = document.querySelector('#pick');  
-        if (pickButton) {  
-            pickButton.addEventListener('click', function() {  
-                // 清空input元素的内容  
-                inp.value = '';
-                alert("正在捡起信件ing……"); 
-            });  
-        } else {  
-            console.error('未找到ID为 "pick" 的按钮。');  
-        }  
-  
-        // 为ID为 "shoot" 的按钮添加点击事件监听器  
-        var shootButton = document.querySelector('#shoot');  
-        if (shootButton) {  
-            shootButton.addEventListener('click', function() {  
-                // 清空input元素的内容  
-                inp.value = '';  
-                alert("已投递成功！");
-            });  
-        } else {  
-            console.error('未找到ID为 "shoot" 的按钮。');  
-        }  
-    } else {  
-        console.error('未找到ID为 "inp" 的input元素。');  
-    }  
-});
-    </script>
+    
 </head>
 <body>
     <main class="ma">
@@ -113,15 +78,29 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="content">
                 <h2 style="font-weight:bold">觅林树洞</h2>
-                    
+                <!--    
                 <div class="import">
-                <img src="./img/sd1.png" alt="">
-                <!--<div id="wrapper"></div>-->
+                
+                
                 </div>
                 <br>
                 <input type="text" id="inp"><br>
                     <button id="shoot">投递</button>
                     <button id="pick">捡起</button>
+                    <br>
+
+-->
+                    <div id="bottleForm">
+                        <img src="./img/sd1.png" alt="">
+                        <h2 style="color: white;font-weight: bolder;">漂流瓶</h2>
+                        <p id="bottleContainer"></p>
+                        <textarea id="bottleMessage" placeholder="想说些什么呢？"></textarea>
+                        <div id="buttonContainer">
+                            <button id="submitBtn">扔一个</button>
+                            <button id="fetchBtn">捞一个</button>
+                        </div>
+                    </div>
+                
                  
                 <script src="milin tree hole.js"></script>
                 <br>

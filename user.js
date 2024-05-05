@@ -31,9 +31,8 @@ async function register(event) {
         body: JSON.stringify({ username, password })
     });
     const data = await response.json();
-    if (data.userId) {
+    if (data.success) {
         document.getElementById('message').textContent = '注册成功！';
-        localStorage.setItem('userId', data.userId);
     } else {
         document.getElementById('message').textContent = '注册失败：' + data.error;
     }

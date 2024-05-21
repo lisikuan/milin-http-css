@@ -1,4 +1,4 @@
-import { checkuser } from './user.js';
+const { login, register, checkuser, toggleForms } = require('./user.js');
 const API_BASE = 'https://server-tni-serverllication-jlocxabspm.cn-hangzhou.fcapp.run';
 let categories = [];
 let selectedCategory = null;

@@ -66,4 +66,10 @@ function toggleForms() {
         toggleButton.textContent = '切换到登录';
     }
 }
+module.exports = {
+    login,
+    register,
+    checkuser,
+    toggleForms
+};
 

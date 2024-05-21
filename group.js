@@ -36,7 +36,7 @@ function addMessage(message) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ message: message, senderUsername: "User", receiverUsername: username })
+        body: JSON.stringify({ message: message, senderUsername: username, receiverUsername: username })
     })
         .then(response => response.json())
         .then(data => {

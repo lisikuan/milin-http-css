@@ -1,6 +1,7 @@
 import { checkuser } from './user.js';
 var apiBaseUrl = 'https://server-tni-serverllication-jlocxabspm.cn-hangzhou.fcapp.run';
 let username = localStorage.getItem('username');
+let group = "群聊3";
 
 checkuser(username).then(userId => {
     localStorage.setItem('userId', userId);
@@ -11,8 +12,8 @@ checkuser(username).then(userId => {
     localStorage.setItem('userId', userId);
 });
 
-function getMessages() {
-    fetch(apiBaseUrl + "/messages?username=" + username)
+function getMessages(group) {
+    fetch(apiBaseUrl + "/messages?username=" + group)
         .then(response => response.json())
         .then(data => {
             if (data.chat) {
@@ -36,7 +37,7 @@ function addMessage(message) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ message: message, senderUsername: username, receiverUsername: username })
+        body: JSON.stringify({ message: message, senderUsername: username, receiverUsername: group })
     })
         .then(response => response.json())
         .then(data => {
@@ -60,8 +61,8 @@ window.onload = function () {
     var groupButtons = document.getElementsByClassName('groupButton');
     for (var i = 0; i < groupButtons.length; i++) {
         groupButtons[i].addEventListener('click', function () {
-            username = this.id;
-            getMessages();
+            group = this.id;
+            getMessages(group);
         });
     }
 };

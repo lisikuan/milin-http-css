@@ -50,7 +50,6 @@ function addMessage(message) {
 }
 
 window.onload = function () {
-    getMessages();
     document.getElementById('sendButton').addEventListener('click', function () {
         var message = document.getElementById('messageInput').value;
         if (message) {

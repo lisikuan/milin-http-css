@@ -6,7 +6,7 @@ var server = app.listen(8082)
 var io = require('socket.io').listen(server);
 
 io.on('connection', (socket) => {
-    console.log('socket 连接成功！');
+    console.log('socket 锟斤拷锟接成癸拷锟斤拷');
 })
 
 app.get('/', (req, res) => {

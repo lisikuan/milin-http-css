@@ -38,6 +38,20 @@ async function register(event) {
     }
 }
 
+async function checkuser(username) {
+    const response = await fetch(`${apiBaseUrl}/checkUsername?username=${username}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    if (data.error) {
+        throw new Error(data.error);
+    }
+    return data.userId;
+}
+
 function toggleForms() {
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');

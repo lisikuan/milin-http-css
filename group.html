@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>同好集群</title>
     <meta charset="UTF-8">
@@ -10,128 +11,139 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="lside.css">
 </head>
+
 <body>
-  <!-- 头部区域开始 -->
-  <main class="ma">
     <!-- 头部区域开始 -->
-    <div class="header w">
-        <!-- 第一行logo -->
-        <div class="logo">
-            <img src="./img/logo1.png" alt="">
+    <main class="ma">
+        <!-- 头部区域开始 -->
+        <div class="header w">
+            <!-- 第一行logo -->
+            <div class="logo">
+                <img src="./img/logo1.png" alt="">
+            </div>
+            <!-- 第一行导航栏 -->
+            <div class="nav w">
+                <ul class="homepage">
+                    <li> <a href="index.html">首页</a> </li>
+                    <li> <a href="rule.html">活跃度细则</a></li>
+                    <li> <a href="milin.html">登录</a></li>
+                </ul>
+            </div>
+            <!-- 第一行搜索框 -->
+            <div class="search">
+                <input type="text" id="word">
+                <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
+                <button id="check" onclick="SearchMessage()">搜索</button>
+            </div>
+            <!-- 第一行用户区 -->
+            <div class="user" style="display: flex; align-items: center; justify-content: center; height: 42px;">
+                <img src="./img/user(1).png" alt="">
+                <a href="user.html" style="font-size: 18px;">用户</a>
+            </div>
         </div>
-        <!-- 第一行导航栏 -->
-        <div class="nav w">
-            <ul class="homepage">
-                <li> <a href="index.html">首页</a> </li>
-                <li> <a href="rule.html">活跃度细则</a></li>
-                <li> <a href="milin.html">登录</a></li>
+        <!-- 头部区域结束 -->
+        <!-- 精品推荐导航部分开始 -->
+        <div class="goods w">
+            <h3>模块分类</h3>
+            <ul>
+                <li>
+                    <a href="gg.html">公告</a>
+                </li>
+                <li>
+                    <a href="company.html">校园搭子</a>
+                </li>
+                <li>
+                    <a href="group.html">同好集群</a>
+                </li>
+                <li>
+                    <a href="milin tree hole.html">觅林树洞</a>
+                </li>
+                <li>
+                    <a href="secret.html">觅林密语</a>
+                </li>
+                <li>
+                    <a href="chat.html">随机群聊</a>
+                </li>
             </ul>
+            <a class="mod" href="#">更多</a>
         </div>
-        <!-- 第一行搜索框 -->
-        <div class="search">
-            <input type="text" id="word">
-            <!--<img class="buttow" src="./img/wenhao.png" alt="">-->
-            <button id="check" onclick="SearchMessage()">搜索</button>
         </div>
-        <!-- 第一行用户区 -->
-        <div class="user" style="display: flex; align-items: center; justify-content: center; height: 42px;">  
-            <img src="./img/user(1).png" alt="">    
-                <a href="user.html" style="font-size: 18px;">用户</a>  
-        </div>   
-    </div>
-    <!-- 头部区域结束 -->
-    <!-- 精品推荐导航部分开始 -->
-    <div class="goods w">
-        <h3>模块分类</h3>
-        <ul>
-            <li>
-                <a href="gg.html">公告</a>
-            </li>
-            <li>
-                <a href="company.html">校园搭子</a>
-            </li>
-            <li>
-                <a href="group.html">同好集群</a>
-            </li>
-            <li>
-                <a href="milin tree hole.html">觅林树洞</a>
-            </li>
-            <li>
-                <a href="secret.html">觅林密语</a>
-            </li>
-            <li>
-                <a href="chat.html">随机群聊</a>
-            </li>
-        </ul>
-        <a class="mod" href="#">更多</a>
-    </div>
-    </div>
-<!-- 精品推荐导航部分结束 -->
-    <div class="contain">
+        <!-- 精品推荐导航部分结束 -->
         <div class="contain">
-            <div class="lside">
-                <a href="gg.html">
-                    <h2>公告</h2>
-                <hr><br>
-                <br>
-                <p>
-                    二、同好、开黑、爱好集群：类似于论坛，但更强调校内属性，对于该模块的设计更加年轻化，在模块首页会对各个小集群的热度进行实时排名。<br>
-                </p></a>
-            </div>
-            <div class="content">
-                <h1 style="text-align: center;color:black;">同好集群</h1>
-                <div id="groupList">
-                    <button class="groupButton" id="群聊1">群聊1</button>
-                    <button class="groupButton" id="群聊2">群聊2</button>
-                    <button class="groupButton" id="群聊3">群聊3</button>
-                    <!-- Add more group chats as needed -->
+            <div class="contain">
+                <div class="lside">
+                    <a href="gg.html">
+                        <h2>公告</h2>
+                        <hr><br>
+                        <br>
+                        <p>
+                            二、同好、开黑、爱好集群：类似于论坛，但更强调校内属性，对于该模块的设计更加年轻化，在模块首页会对各个小集群的热度进行实时排名。<br>
+                        </p>
+                    </a>
                 </div>
-                <div id="chatWindow">
+                <div class="content">
+                    <h1 style="text-align: center;color:black;">同好集群</h1>
+                    <div id="groupList">
+                        <button class="groupButton" id="群聊1">群聊1</button>
+                        <button class="groupButton" id="群聊2">群聊2</button>
+                        <button class="groupButton" id="群聊3">群聊3</button>
+                        <!-- Add more group chats as needed -->
+                    </div>
+                    <div id="chatWindow">
+                    </div>
+                    <input type="text" id="messageInput" placeholder="Type your message">
+                    <button id="sendButton">发送</button>
                 </div>
-                <input type="text" id="messageInput" placeholder="Type your message">
-                <button id="sendButton">发送</button>
-            </div>
             </div>
         </div>
-    <div class="footer">
-        <div class="w">
-            <div class="copyright">
-                <a href="#" class="cc">下载觅林App</a>
-                <!--<div class="rainbow"></div>-->
-                <div class="container">
-                <a href="#" class="shadow">Milin</a>
-                <!--<img src="./img/logo1.1.png" alt="">-->
-        </div>
-                <p>
-                   友情连接、项目条款、声明
-                    <br>
-                    © “觅林”项目开发组保留所有权利。
-                    <br> “觅林”意为“在使用我们的开发项目后能够像走迷宫一样发现独属于自己的那颗树（那个人）”。
-                </p>
-            </div> 
-            <div class="links">
-                <dl>
-                    <dt>关于“觅林”</dt>
-                    <dd> <a href="#">关于 </a> </dd>
-                    <dd> <a href="#">管理团队</a> </dd>
-                    <dd> <a href="#">工作机会</a> </dd>
-                    <dd> <a href="#">客户服务</a> </dd>
-                    <dd> <a href="#">帮助 </a> </dd>
-                </dl>
-                <dl>
-                    <dt>友情链接</dt>
-                    <dd><a href="http://dekt.bupt.edu.cn" target="_blank">第二课堂</a></dd>
-                    <dd><a href="http://static.byr.cn" target="_blank">北邮人论坛</a></dd>
-                </dl>
+        <div class="footer">
+            <div class="w">
+                <div class="copyright">
+                    <a href="#" class="cc">下载觅林App</a>
+                    <!--<div class="rainbow"></div>-->
+                    <div class="container">
+                        <a href="#" class="shadow">Milin</a>
+                        <!--<img src="./img/logo1.1.png" alt="">-->
+                    </div>
+                    <p>
+                        友情连接、项目条款、声明
+                        <br>
+                        © “觅林”项目开发组保留所有权利。
+                        <br> “觅林”意为“在使用我们的开发项目后能够像走迷宫一样发现独属于自己的那颗树（那个人）”。
+                    </p>
+                </div>
+                <div class="links">
+                    <dl>
+                        <dt>关于“觅林”</dt>
+                        <dd> <a href="#">关于 </a> </dd>
+                        <dd> <a href="#">管理团队</a> </dd>
+                        <dd> <a href="#">工作机会</a> </dd>
+                        <dd> <a href="#">客户服务</a> </dd>
+                        <dd> <a href="#">帮助 </a> </dd>
+                    </dl>
+                    <dl>
+                        <dt>友情链接</dt>
+                        <dd><a href="http://dekt.bupt.edu.cn" target="_blank">第二课堂</a></dd>
+                        <dd><a href="http://static.byr.cn" target="_blank">北邮人论坛</a></dd>
+                    </dl>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 底部模块结束 -->
-  </main>
+        <!-- 底部模块结束 -->
+    </main>
 
     <script>
         var apiBaseUrl = 'https://server-tni-serverllication-jlocxabspm.cn-hangzhou.fcapp.run';
-        var username = "群聊1"; // Default group chat
+        let username = localStorage.getItem('username');
+
+        checkuser(username).then(userId => {
+            localStorage.setItem('userId', userId);
+        }).catch(() => {
+            username = 'default'; // defauly username
+            localStorage.setItem('username', username);
+            userId = 8; // default userId
+            localStorage.setItem('userId', userId);
+        });
 
         function getMessages() {
             fetch(apiBaseUrl + "/messages?username=" + username)
@@ -140,7 +152,7 @@
                     if (data.chat) {
                         var chatWindow = document.getElementById('chatWindow');
                         chatWindow.innerHTML = '';
-                        data.chat.forEach(function(msg) {
+                        data.chat.forEach(function (msg) {
                             chatWindow.innerHTML += '<p>' + msg.sender + ': ' + msg.message + '</p>';
                         });
                     } else {
@@ -150,12 +162,15 @@
         }
 
         function addMessage(message) {
+            if (message === null) {
+                throw new Error('message cannot be null');
+            }
             fetch(apiBaseUrl + "/message", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({message: message, senderUsername: "User", receiverUsername: username})
+                body: JSON.stringify({ message: message, senderUsername: "User", receiverUsername: username })
             })
                 .then(response => response.json())
                 .then(data => {
@@ -168,9 +183,9 @@
                 });
         }
 
-        window.onload = function() {
+        window.onload = function () {
             getMessages();
-            document.getElementById('sendButton').addEventListener('click', function() {
+            document.getElementById('sendButton').addEventListener('click', function () {
                 var message = document.getElementById('messageInput').value;
                 if (message) {
                     addMessage(message);
@@ -178,7 +193,7 @@
             });
             var groupButtons = document.getElementsByClassName('groupButton');
             for (var i = 0; i < groupButtons.length; i++) {
-                groupButtons[i].addEventListener('click', function() {
+                groupButtons[i].addEventListener('click', function () {
                     username = this.id;
                     getMessages();
                 });
@@ -186,4 +201,5 @@
         };
     </script>
 </body>
+
 </html>

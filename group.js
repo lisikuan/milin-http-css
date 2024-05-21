@@ -8,8 +8,7 @@ checkuser(username).then(userId => {
 }).catch(() => {
     username = 'default'; // defauly username
     localStorage.setItem('username', username);
-    userId = 8; // default userId
-    localStorage.setItem('userId', userId);
+    localStorage.setItem('userId', 8);
 });
 
 function getMessages(group) {
@@ -42,7 +41,7 @@ function addMessage(message) {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                getMessages();
+                getMessages(group);
                 document.getElementById('messageInput').value = '';
             } else {
                 alert('Message not sent');
